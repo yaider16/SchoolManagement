@@ -4,28 +4,19 @@ public class Subject {
     private int code;
     private String name;
     private int credCant;
+    private float finalNote;
 
-    public int getCode() {
-        return code;
+    public void setFinalNote (float finalNote){
+        this.finalNote = finalNote;
     }
 
-    public void setCode(int code) {
+    public float getFinalNote (){
+        return this.finalNote;
+    }
+
+    public Subject(int code, String name, int credCant){
         this.code = code;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
-    }
-
-    public int getCredCant() {
-        return credCant;
-    }
-
-    public void setCredCant(int credCant) {
         this.credCant = credCant;
     }
 }
