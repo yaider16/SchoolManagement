@@ -1,9 +1,9 @@
 package co.edu.uptc.model;
 
 public class Subject {
-    private int code;
-    private String name;
-    private int credCant;
+    private final int code;
+    private final String name;
+    private final int credCant;
     private float finalNote;
 
     public void setFinalNote (float finalNote){

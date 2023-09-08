@@ -1,6 +1,5 @@
 package Presenter;
 import View.View;
-import co.edu.uptc.model.Subject;
 import co.edu.uptc.model.Systems;
 
 public class Presenter {
@@ -77,8 +76,8 @@ public class Presenter {
             view.showMessage("El estudiante no existe");
         }else{
             String[] subjects = {"Matematicas", "Ingles", "Programacion", "Fisica"};
-            for (int i = 0; i < subjects.length; i++) {
-                system.registerFinalNote(verifyer, view.askInfo("Ingrese la nota de " + subjects[i]));
+            for (String subject : subjects) {
+                system.registerFinalNote(verifyer, view.askInfo("Ingrese la nota de " + subject));
             }
         }
     }

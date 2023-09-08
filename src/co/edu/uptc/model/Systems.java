@@ -60,10 +60,10 @@ public class Systems {
 
     public void registerFinalNote(int studentCode, String note) {
         if (searchStudent(studentCode)){
-            for (int i = 0; i < students.length; i++) {
-                if (students[i].getCode() == studentCode){
-                    for (int j = 0; j < students[i].subjects.length; j++) {
-                        students[i].subjects[j].setFinalNote(Float.parseFloat(note));
+            for (Student student : students) {
+                if (student.getCode() == studentCode) {
+                    for (int j = 0; j < student.subjects.length; j++) {
+                        student.subjects[j].setFinalNote(Float.parseFloat(note));
                     }
                 }
             }
